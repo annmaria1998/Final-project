@@ -1,0 +1,22 @@
+{% extends 'myapp/admin_base.html' %}
+{% load static %}
+{% block title %}Keywords Add{% endblock %}
+{% block body %}
+<center>
+    <h1>Keywords Add</h1>
+     <div class="container">
+         <form role="form" name="frm" action="{% url 'admin_keywords_master_add'%}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="keywords">Keywords :</label>
+            <input class="form-control" type="text" name="keywords" id="keywords" value="">
+        </div>
+       <button type="submit"
+        class="btn btn-info" id="bt" name="bt">Add</button>
+        <button type="reset"
+        class="btn btn-info" id="rt" name="rt">Clear</button>
+    </form>
+     </div>
+    <h3>{{msg}}</h3>
+</center>
+{% endblock %}

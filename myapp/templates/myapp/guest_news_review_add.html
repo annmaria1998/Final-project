@@ -1,0 +1,22 @@
+{% extends 'myapp/guest_base.html' %}
+{% load static %}
+{% block title %}News Review Add{% endblock %}
+{% block body %}
+<center>
+    <h2><font color="#366092">News Review Add</font></h2>
+<div class="container">
+    <form name="frm" role="form" action="{% url 'guest_news_review_add' %}" method="post" >
+            {% csrf_token %}
+        <div class="form-group">
+            <label for="review">Review</label>
+            <input class="form-control" type="text"  id="review" name="msg" placeholder="review" required="required"></td>
+        </div>
+        <button type="submit" class="btn btn-info" id="bt" name="bt">Add</button>
+        <button type="reset" class="btn btn-info" id="rt" name="rt">Reset</button>
+
+        <input type="hidden"  name="post_id" value="{{post_id}}" >
+        {{msg}}
+    </form>
+</div>
+</center>
+{% endblock %}

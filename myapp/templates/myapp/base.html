@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Breaking News</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static './myapp/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static './myapp/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static './myapp/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/owl.carousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static './myapp/assets/vendor/aos/aos.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static './myapp/assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor - v2.2.1
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="{% url 'index'%}">Breaking News</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{% url 'index'%}">Home</a></li>
+          <li><a href="{% url 'about'%}">About</a></li>
+
+          <li class="drop-down"><a href="">Login</a>
+            <ul>
+              <li><a href="{% url 'admin_login'%}">Admin</a></li>
+              <li><a href="{% url 'user_login'%}">Reporter</a></li>
+              <li><a href="{% url 'guest_login'%}">user</a></li>
+
+            </ul>
+          </li>
+          <li><a href="{% url 'contact'%}">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="{% url 'about'%}" class="get-started-btn">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>The Smartest way to <br> follow the News </h1>
+      <h2></h2>
+      <a href="{% url 'about'%}" class="btn-get-started">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>About Us</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static './myapp/assets/img/news.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Breaking News is an online news information system.</h3>
+            <p class="font-italic">
+            Get the latest Breaking News Alerts and latest headlines and daily articles near you.
+            </p>
+            <p>
+              Breaking News combines hundreds of trusted sources to provide the best content as fast as possible! You can even follow news through your favorite topics.
+            </p>
+
+            <a href="{% url 'about'%}" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">955</span>
+            <p>Viewers</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">12</span>
+            <p>Reporters</p>
+          </div>
+
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">5</span>
+            <p>Trainers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose Breaking News?</h3>
+              <p>
+              It's an Online News Information System. Here users can view the breaking news with its pictures.
+              </p>
+              <div class="text-center">
+                <a href="{% url 'about'%}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Reporters</h2>
+          <p>Our Professional Reporters</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static './myapp/assets/img/trainers/swetha.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sweta Singh</h4>
+
+                <p>
+                  She is an Indian journalist and news presenter. She is known for her expertise in covering sports-related news.
+                  </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static './myapp/assets/img/trainers/rajdeep.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Rajdeep Sardesai</h4>
+
+                <p>
+                  He is an Indian news anchor, journalist and author. He was the Editor-in-Chief of Global Broadcast News, that included CNN-IBN, IBN7 and IBN-Lokmat, before resigning in July 2014.
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static './myapp/assets/img/trainers/nidhi.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Nidhi Razdan</h4>
+
+                <p>
+                  She was the executive editor of NDTV and the primary anchor of NDTV 24x7 news show Left, Right & Centre.
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+
+   {% block body %}{% endblock %}
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Breaking News</h3>
+            <p>
+              Trade Centre,  <br>
+              2nd Floor amala City,<br>
+              Senapati Bapat Marg Lower Parel,<br>
+              K Mumbai-400013 <br><br>
+              <strong>Phone:</strong> +91-22-4983355<br>
+              <strong>Email:</strong> info@bn.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Breaking News</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static './myapp/assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static './myapp/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static './myapp/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

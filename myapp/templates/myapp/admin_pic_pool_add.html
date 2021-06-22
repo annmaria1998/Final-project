@@ -1,0 +1,30 @@
+{% extends 'myapp/admin_base.html' %}
+{% load static %}
+{% block title %}Picture Pool Add{% endblock %}
+{% block body %}
+<center>
+    <h1>Picture Pool Add</h1>
+     <div class="container">
+    <form role="form" name="frm" action="{% url 'admin_pic_pool_add'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="type_id">Category :</label>
+            <select class="form-control" id="type_id"  name="type_id">
+                {% for  tm in type_list%}
+                <option value="{{tm.id}}">{{tm.type_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="document">Image :</label>
+            <input class="form-control" type="file" name="document" id="document">
+        </div>
+       <button type="submit"
+        class="btn btn-info" id="bt" name="bt">Add</button>
+        <button type="reset"
+        class="btn btn-info" id="rt" name="rt">Clear</button>
+    </form>
+     </div>
+    <h3>{{msg}}</h3>
+</center>
+{% endblock %}
